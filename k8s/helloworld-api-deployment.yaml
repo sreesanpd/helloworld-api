@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: helloworld-api-deployment
+  name: helloworld-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-api-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: helloworld-api-deployment
+    spec:
+      containers:
+      - image: sreesanpd/helloworld-api:latest
+        name: helloworld-api
+        resources: {}
+status: {}
