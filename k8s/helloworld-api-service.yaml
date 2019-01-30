@@ -3,16 +3,16 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: hellworld-api-service
-  name: hellworld-api-service
+    app: helloworld-api
+  name: helloworld-api
 spec:
   ports:
-  - name: 8888-80
+  - name: helloworld-api
     port: 5000
     protocol: TCP
     targetPort: 5000
   selector:
-    app: hellworld-api-service
+    app: helloworld-api
   type: NodePort
 status:
   loadBalancer: {}

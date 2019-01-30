@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: helloworld-api-deployment
-  name: helloworld-api-deployment
+    app: helloworld-api
+  name: helloworld-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: helloworld-api-deployment
+      app: helloworld-api
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: helloworld-api-deployment
+        app: helloworld-api
     spec:
       containers:
       - image: sreesanpd/helloworld-api:latest
