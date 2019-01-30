@@ -10,16 +10,17 @@ using Microsoft.Extensions.Logging;
 
 namespace helloworld_api
 {
-    public class Program
+public class Program
+{
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            CreateWebHostBuilder(args).Build().Run();
-        }
+        var host = new WebHostBuilder()
+            .UseKestrel()
+            .UseUrls("http://*:5000")
+            .UseStartup<Startup>()
+            .Build();
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-	        .UseUrls("http://0.0.0.0:8080")
-                .UseStartup<Startup>();
+        host.Run();
     }
+}
 }

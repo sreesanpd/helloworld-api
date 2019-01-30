@@ -8,9 +8,9 @@ metadata:
 spec:
   ports:
   - name: 8888-80
-    port: 8888
+    port: 5000
     protocol: TCP
-    targetPort: 80
+    targetPort: 5000
   selector:
     app: hellworld-api-service
   type: NodePort
